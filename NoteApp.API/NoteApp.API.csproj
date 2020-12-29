@@ -1,0 +1,20 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <UserSecretsId>046634f3-9dd6-44e3-be29-3cc2c3fbd262</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="5.0.1" NoWarn="NU1605" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="5.0.1" NoWarn="NU1605" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NoteApp.Core\NoteApp.Core.csproj" />
+    <ProjectReference Include="..\NoteApp.Data\NoteApp.Data.csproj" />
+    <ProjectReference Include="..\NoteApp.Services\NoteApp.Services.csproj" />
+  </ItemGroup>
+
+</Project>
