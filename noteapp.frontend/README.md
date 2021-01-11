@@ -1,6 +1,6 @@
 # Note App
 
-> A node.js project
+> A Redux-React Project
 
 ## Build Setup Cmd
 
