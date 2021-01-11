@@ -7,7 +7,7 @@
 * MongoDb Atlas
 * Swagger
 
-###### Frontend Node.js
+###### Frontend Redux-React
 * Redux-React
 * Node.Js v15.3.0
 * React Bootstrap
