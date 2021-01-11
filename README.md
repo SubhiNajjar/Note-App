@@ -13,11 +13,12 @@
 * React Bootstrap
 * JSX
 
-#### Set-up Db
-Commands
+## Set-up Db Commands
 
-* Space Name
-`dotnet user-secrets init -p NoteApp.API`
+``` bash
+# Space Name Db
+dotnet user-secrets init -p NoteApp.API
 
-* Set Db
-`dotnet user-secrets set "Connectionstring" "mongodb+srv://<username>:<password>@test.wzl6u.mongodb.net/<dbname>?retryWrites=true&w=majority"-p NoteApp.API`
+# Set MongoDb
+dotnet user-secrets set "Connectionstring" "mongodb+srv://<username>:<password>@test.wzl6u.mongodb.net/<dbname>?retryWrites=true&w=majority"-p NoteApp.API
+```
