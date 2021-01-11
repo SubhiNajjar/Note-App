@@ -37,6 +37,17 @@ namespace NoteApp.API
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "NoteApp.API", Version = "v1" });
             });
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("NotesPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("*")
+                               .AllowAnyHeader()
+                               .AllowAnyMethod();
+                    });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,6 +63,8 @@ namespace NoteApp.API
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("NotesPolicy");
 
             app.UseAuthorization();
 
