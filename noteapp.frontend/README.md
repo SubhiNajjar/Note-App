@@ -2,10 +2,10 @@
 
 > A node.js project
 
-## Build Setup
+## Build Setup Cmd
 
 ``` bash
-# install
+# Install
 npm install react-scripts
 
 # Start
