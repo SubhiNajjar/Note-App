@@ -13,7 +13,7 @@
 * React Bootstrap
 * JSX
 
-## Set-up Db Commands
+## Set-up Db Commands T.Ex
 
 ``` bash
 # Space Name Db
