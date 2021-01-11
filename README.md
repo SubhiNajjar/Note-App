@@ -6,5 +6,8 @@ I am working on it. . .
 * MongoDb Atlas
 * Swagger
 
-###### Frontend Node.js . Not Ready 
-* Node.js
+###### Frontend Node.js . Ready .
+* Redux-React
+* Node.Js v15.3.0
+* React Bootstrap
+* JSX
