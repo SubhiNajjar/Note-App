@@ -11,7 +11,6 @@
 * Redux-React
 * Node.Js v15.3.0
 * React Bootstrap
-* JSX
 
 ## Set-up Db Commands T.Ex
 
