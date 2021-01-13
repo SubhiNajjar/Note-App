@@ -37,20 +37,20 @@ const NoteModal = ({ note, handleFormSubmit, show, handleClose }) => {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Your Note</Modal.Title>
             </Modal.Header>
             <Form onSubmit={event => {
                 event.preventDefault();
                 handleFormSubmit(dispatch, modalNote);
             }}>
                 <Modal.Body>
-                    <InputGroup>
+                    <InputGroup className="form-group">
                         <FormControl value={modalNote === null ? '' : modalNote.subject}
-                            onChange={event => setModalNote({ ...modalNote, subject: event.target.value })} />
+                            onChange={event => setModalNote({ ...modalNote, subject: event.target.value })} placeholder="Subject" />
                     </InputGroup>
                     <InputGroup>
                         <FormControl value={modalNote === null ? '' : modalNote.reminder}
-                            onChange={event => setModalNote({ ...modalNote, reminder: event.target.value })} />
+                            onChange={event => setModalNote({ ...modalNote, reminder: event.target.value })} placeholder="Note" />
                     </InputGroup>
                 </Modal.Body>
                 <Modal.Footer>

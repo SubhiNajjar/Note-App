@@ -1,8 +1,9 @@
-import { Button } from "react-bootstrap";
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { DeleteNote, GetNotes } from '../services/notes';
 import { EditNoteModal } from "./NoteModal";
+import "./NotesTable.css";
+
 
 
 export const NotesTable = () => {
@@ -13,22 +14,28 @@ export const NotesTable = () => {
         GetNotes(dispatch);
     }, []);
 
-    return <table className='table table-dark'>
-        <tbody>
-            {
-                notes.map(n =>
-                    <tr key={n.id}>
-                        <td style={{ width: '3rem' }}>
-                            <EditNoteModal note={n} />
-                        </td>
-                        <td style={{ width: '3rem' }}>
-                            <Button className='btn btn-danger' onClick={() => DeleteNote(dispatch, n)}>Delete</Button>
-                        </td>
-                        <td style={{ textAlign: 'left' }}>{n.subject}</td>
-                        <td style={{ textAlign: 'left' }}>{n.reminder}</td>
-                    </tr>
-                )
-            }
-        </tbody>
-    </table>
+    return <div class="container">
+        <div class="row">{
+            notes.map(n =>
+                <div key={n.id} class="col-sm-4 mb-3">
+                    <div class="card border-info mb-3" style={{ width: '18rem' }}>
+                        <div class="card-header text-info">{n.subject}</div>
+                        <div class="card-body text-dark">
+                            <p class="card-text">
+                                {n.reminder}
+                            </p>
+                            <div class="card-footer bg-transparent">
+                                <a style={{ width: '3rem' }}>
+                                    <EditNoteModal note={n} />
+                                </a>
+                                <a class="delete" onClick={() => DeleteNote(dispatch, n)}></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )
+        }
+        </div>
+
+    </div>
 }
